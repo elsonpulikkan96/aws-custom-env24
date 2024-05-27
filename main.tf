@@ -40,3 +40,13 @@ module "iam" {
   source       = "./modules/iam"
   project_name = var.project_name
 }
+
+
+# CloudWatch Alarms Module
+module "cloudwatch_alarms" {
+  source        = "./modules/cw-alarms"
+  alarm_actions = ["arn:aws:sns:ap-south-1:471112860991:aws-custom-env"]
+  cpu_threshold = 80
+  instance_ids  = module.ec2.instance_ids # Fetch instance IDs from EC2 module
+}
+
