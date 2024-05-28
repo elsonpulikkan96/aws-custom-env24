@@ -1,4 +1,3 @@
-# EC2 Instance(s)
 resource "aws_instance" "public_instance" {
   count                    = var.public_instance_count
   ami                     = var.ami_id
@@ -44,7 +43,6 @@ resource "aws_instance" "private_instance_2" {
   }
 }
 
-# Output for All Instance IDs
 output "instance_ids" {
   description = "List of all EC2 instance IDs"
   value = concat(

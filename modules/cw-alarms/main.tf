@@ -2,13 +2,13 @@
 data "archive_file" "create_alarm_zip" {
   type        = "zip"
   source_dir  = "${path.module}/lambdas" # Updated path
-  output_path = "${path.module}/lambdas/createAlarm.zip" # Updated path
+  output_path = "${path.module}/lambdas/createAlarm.zip"
 }
 
 data "archive_file" "delete_alarm_zip" {
   type        = "zip"
   source_dir  = "${path.module}/lambdas" # Updated path
-  output_path = "${path.module}/lambdas/deleteAlarm.zip" # Updated path
+  output_path = "${path.module}/lambdas/deleteAlarm.zip"
 }
 
 # Lambda Functions (Updated to use correct path)
@@ -17,7 +17,7 @@ resource "aws_lambda_function" "create_alarm" {
   function_name    = "create_alarm"
   role             = aws_iam_role.lambda_exec.arn
   handler          = "createAlarm.lambda_handler"
-  source_code_hash = filebase64sha256(data.archive_file.create_alarm_zip.output_path) # Updated to use filebase64sha256
+  source_code_hash = filebase64sha256(data.archive_file.create_alarm_zip.output_path)
   runtime          = "python3.10"
   timeout          = 30
   environment {
@@ -33,7 +33,7 @@ resource "aws_lambda_function" "delete_alarm" {
   function_name    = "delete_alarm"
   role             = aws_iam_role.lambda_exec.arn
   handler          = "deleteAlarm.lambda_handler"
-  source_code_hash = filebase64sha256(data.archive_file.delete_alarm_zip.output_path) # Updated to use filebase64sha256
+  source_code_hash = filebase64sha256(data.archive_file.delete_alarm_zip.output_path)
   runtime          = "python3.10"
   timeout          = 30
   environment {
