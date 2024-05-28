@@ -37,10 +37,10 @@ Getting Started
 Create a Project Directory:
 
 ```sh
-mkdir devops_prod
+mkdir devops_test
 ```
 ```sh
-cd devops_prod
+cd devops_test
 ```
 
 Create a main.tf file and start Building:
@@ -97,4 +97,4 @@ Make sure to replace placeholder values, variables, and other parameters in the 
 Refer to the official Terraform installation guide for the latest version.
 
 Explore additional Terraform modules on the Terraform Registry.
-
+Explore more features on Terraform Modules
