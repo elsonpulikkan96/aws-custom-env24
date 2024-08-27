@@ -11,6 +11,10 @@ IAM User: Create an IAM user with appropriate EC2 permissions and access tokens.
 
 Terraform Installation:
 
+Note:  Always Check for the latest stable terraform version from this URL and make sure to edit it Download Source code and extracting commands below
+
+Open in Browser: https://releases.hashicorp.com/terraform/
+
 ```sh
 wget https://releases.hashicorp.com/terraform/1.8.3/terraform_1.8.3_linux_amd64.zip
 ```
