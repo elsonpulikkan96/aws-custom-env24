@@ -16,7 +16,7 @@ Note:  Always Check for the latest stable terraform version from this URL and ma
 Open in Browser: https://releases.hashicorp.com/terraform/
 
 ```sh
-wget https://releases.hashicorp.com/terraform/1.8.3/terraform_1.8.3_linux_amd64.zip
+wget https://releases.hashicorp.com/terraform/1.9.6/terraform_1.9.6_linux_amd64.zip
 ```
 
 ```sh
